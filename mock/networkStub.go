@@ -138,3 +138,8 @@ func (ns *NetworkStub) InterfaceListenAddresses() ([]multiaddr.Multiaddr, error)
 func (ns *NetworkStub) Process() goprocess.Process {
 	return nil
 }
+
+// CanDial -
+func (ns *NetworkStub) CanDial(_ peer.ID, _ multiaddr.Multiaddr) bool {
+	return false
+}
